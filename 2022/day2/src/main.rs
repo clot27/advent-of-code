@@ -12,10 +12,10 @@ static WIN: u8 = 6;
 static DRAW: u8 = 3;
 
 fn calculate_score() -> (i32, i32) {
-    let contents =
+    let contents: String =
         fs::read_to_string("demo_input.txt").expect("Should have been able to read the file");
-    let mut score = 0;
-    let mut score2 = 0;
+    let mut score: i32 = 0;
+    let mut score2: i32 = 0;
     for line in contents.split('\n') {
         score += match line.chars().next() {
             Some('A') => {

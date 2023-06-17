@@ -1,0 +1,1 @@
+Learning rust by doing quizzes by adventofcode.com, I may write some of the worst rust code you've ever seen, but I'm just learning.

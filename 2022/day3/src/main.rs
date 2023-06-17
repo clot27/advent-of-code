@@ -1,7 +1,7 @@
 use std::fs;
 fn main() {
-    let score = part_one();
-    let score2 = part_two();
+    let score: i32 = part_one();
+    let score2: i32 = part_two();
     println!("{}, {}", score, score2);
 }
 
@@ -15,10 +15,10 @@ fn read_file_to_string() -> String {
 }
 
 fn part_one() -> i32 {
-    let contents = read_file_to_string();
+    let contents: String = read_file_to_string();
     let mut score: i32 = 0;
     for line in contents.split('\n') {
-        let common = find_common_in_two(line.split_at(line.len() / 2));
+        let common: Vec<char> = find_common_in_two(line.split_at(line.len() / 2));
         for i in common {
             score += ASCII_LOWER
                 .iter()
@@ -35,7 +35,7 @@ fn part_one() -> i32 {
 }
 
 fn part_two() -> i32 {
-    let contents = read_file_to_string();
+    let contents: String = read_file_to_string();
     let contents: Vec<&str> = contents.split('\n').collect();
     let mut to_append_vec: Vec<&str> = Vec::new();
     let mut score: i32 = 0;
